@@ -1,0 +1,529 @@
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0; 
+    font-family: sans-serif; /* From style2 */
+    /* Remove old body padding for fixed navbar if navbar style changes */
+    padding-top: 0; 
+}
+
+/* Body Header */
+#body-header {
+    height: 65vh; /* From style2 */
+    opacity: 0.9; /* Slightly less opaque than style2 */
+    /* Using a Picsum image, replace with your desired image */
+    background-image: url('https://picsum.photos/id/1015/1920/1080'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keep fixed effect */
+    position: relative; /* Needed for absolute positioning of content inside */
+}
+
+/* Navbar Customization (Adapting style2 concepts) */
+#mainNavbar {
+    background-color: transparent; /* Start transparent */
+    transition: background-color 0.4s ease-in-out;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+#mainNavbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8); /* White-ish color */
+    font-size: 0.9rem;
+    font-weight: 600; /* Bolder */
+    letter-spacing: 0.5px;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+    position: relative; 
+    padding-bottom: 0.5rem; /* Space for border */
+}
+
+#mainNavbar .navbar-nav .nav-link:hover,
+#mainNavbar .navbar-nav .nav-link.active {
+    color: white;
+}
+
+/* Underline effect on hover/active */
+#mainNavbar .navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+#mainNavbar .navbar-nav .nav-link:hover::after,
+#mainNavbar .navbar-nav .nav-link.active::after {
+    width: 70%; /* Adjust width as needed */
+}
+
+/* Style for navbar when scrolled */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background on scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Name and Social Icons */
+#name-social-container {
+    /* Using flex utilities in HTML */
+    /* margin-top: 20vh; From style2 - achieved via flex h-100 */
+}
+
+#my-name {
+    /* font-size: 3rem; From style2 - Use Bootstrap display classes */
+    /* letter-spacing: 0.1rem; */
+    /* color: white; Added via text-white */
+    /* font-weight: 700; Added via fw-bold */
+    /* margin-bottom: 0.5rem; Adjusted via mt-3 on parent */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons li a i {
+    padding: 0.7rem; /* Slightly larger padding */
+    font-size: 1.2rem; /* Adjusted size */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons li a i:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3); /* From style2 */
+}
+
+/* About Section */
+#about {
+    position: relative; /* Keep for image positioning */
+    background-color: var(--bs-body-bg); /* Use Bootstrap body background */
+}
+
+#my-image {
+    height: 12rem; /* From style2 */
+    width: 12rem; /* From style2 */
+    margin-top: -6rem; /* Pull up half the height */
+    position: relative; /* Needed for z-index */
+    z-index: 1;
+}
+
+#my-image img {
+     /* Using Bootstrap classes: rounded-circle border border-3 border-white shadow */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* border-radius: 50%; */
+    /* border: 3px solid white; */
+    /* box-shadow: 1px 1px 10px 2px lightgrey; */
+}
+
+#about-para {
+    /* width: 70%; From style2 - Handled by col-lg-8 mx-auto */
+    text-align: center; /* Changed from justify */
+    color: var(--bs-secondary-color); /* Use Bootstrap secondary text */
+    /* line-height: 28px; Handled by lh-lg */
+    /* font-size: 1.1rem; Set base size or adjust lh-lg */
+}
+
+.text-highlight {
+    color: var(--bs-primary); /* Use Bootstrap primary color */
+    /* font-weight: 600; Added via fw-bold */
+}
+
+/* Section Heading */
+.section-heading h2 {
+    font-size: 2rem; /* Adjusted size */
+    margin-bottom: 0; /* Remove default margin */
+    color: var(--bs-body-color);
+    position: relative;
+    padding-bottom: 0.8rem; 
+}
+
+.section-heading h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--bs-primary);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Use text-white for headings on dark backgrounds like contact */
+#contact .section-heading h2 {
+    color: white;
+}
+#contact .section-heading h2::after {
+    background-color: white;
+}
+
+/* Skills Section */
+#skills {
+    background-color: var(--bs-light); /* Use Bootstrap light background */
+}
+
+.skills-display {
+    /* width: 70%; From style2 - Handled by container/row */
+    /* Using Bootstrap row/col */
+}
+
+.skill-progress {
+    width: 100%; /* Fill column */
+    height: 2rem; /* From style2 */
+    background-color: #e9ecef; /* Bootstrap light grey */
+    border-radius: 1rem; /* From style2 */
+    box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+    overflow: hidden; /* Keep fill inside */
+    position: relative;
+}
+
+.skill-fill {
+    border-radius: inherit; /* From style2 */
+    height: 100%;
+    /* Display flex and alignment handled via span positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.8s ease-in-out;
+}
+
+.skill-name {
+    color: white; /* From style2 */
+    position: absolute; /* Position inside the fill */
+    left: 10px; /* From style2 */
+    line-height: 2rem; /* Center vertically */
+    font-size: 0.9rem; /* Adjusted size */
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Skill Colors (from style2) */
+.cpp { background-color: #2857a4; }
+.html { background-color: orangered; }
+.css { background-color: blueviolet; }
+.javascript { background-color: teal; }
+.nodejs { background-color: #2857a4; }
+.mongodb { background-color: blueviolet; }
+
+/* Experience & Education Timeline */
+.timeline {
+    position: relative;
+    width: 75%; /* From style2 */
+    margin: auto;
+    padding: 1rem 0;
+}
+
+.timeline-box {
+    position: relative;
+    margin: 5px;
+    width: calc(50% - 10px); /* Adjusted for gap */
+    min-height: 150px; /* From style2 */
+    padding: 1.5rem;
+    background-color: var(--bs-body-bg);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternating Sides */
+.timeline-box:nth-child(2n) {
+    left: calc(50% + 5px); /* Position on right */
+}
+
+.timeline-box:nth-child(2n + 1) {
+    left: 0; /* Position on left */
+    /* text-align: right; Optional */
+}
+
+/* Timeline connector dots */
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    top: 30%; /* Adjust vertical position */
+    border-radius: 50%;
+    width: 15px; /* From style2 */
+    height: 15px; /* From style2 */
+    background-color: var(--bs-light);
+    z-index: 1;
+    border: 2px solid var(--bs-primary);
+}
+
+.timeline-box:nth-child(2n + 1)::after {
+    right: -12.5px; /* Position dot for left items */
+}
+
+.timeline-box:nth-child(2n)::after {
+    left: -12.5px; /* Position dot for right items */
+}
+
+/* Central Divider */
+.timeline-divider {
+    position: absolute;
+    height: 80%; /* Adjusted height */
+    width: 0;
+    border: 2px dashed var(--bs-primary-bg-subtle); /* Use Bootstrap subtle color */
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.timeline-traveller {
+    position: sticky;
+    top: 30%; /* Align with dots */
+    z-index: 2;
+    transform: translateY(-50%) rotate(90deg); /* Rotate icon */
+    color: var(--bs-primary);
+    font-size: 1.5rem;
+}
+
+/* Timeline Box Content */
+.timeline-title {
+    font-weight: 600;
+    color: var(--bs-primary);
+    margin-bottom: 0.3rem;
+}
+
+.timeline-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-duration {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-text {
+    font-size: 0.9rem;
+    color: var(--bs-secondary-color);
+    line-height: 1.5;
+}
+
+/* Portfolio Section */
+#portfolio-display {
+    /* Using Bootstrap row/cols */
+}
+
+.portfolio-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.portfolio-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-image-container img {
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-image-container img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 87, 164, 0.7); /* Color from style2 .text-highlight */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Contact Section */
+#contact {
+    background: linear-gradient(to right, #2857a4, blueviolet); /* Gradient from style2 */
+}
+
+#contact .form-control {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+    padding: 0.8rem 0.5rem;
+}
+
+#contact .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#contact .form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    box-shadow: none;
+    border-bottom-color: white;
+}
+
+#contact-details p {
+    margin-bottom: 1.5rem;
+}
+
+#contact-details h4 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-details i {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+footer {
+     background-color: #1a1a1a; /* Darker footer */
+}
+
+footer .social-icons a i {
+     color: var(--bs-secondary-color);
+     transition: color 0.3s ease;
+}
+
+footer .social-icons a i:hover {
+     color: var(--bs-primary);
+     background: none;
+     box-shadow: none;
+}
+
+/* Dark Mode Adaptations (Conceptual - Needs refinement based on design) */
+[data-bs-theme="dark"] body {
+    /* Default dark theme handles most text/bg */
+}
+
+[data-bs-theme="dark"] #mainNavbar {
+    /* Navbar might already be dark enough, or adjust */
+}
+
+[data-bs-theme="dark"] .navbar-scrolled {
+     background-color: rgba(10, 10, 10, 0.9); /* Even darker on scroll */
+}
+
+[data-bs-theme="dark"] #my-image img {
+     border-color: #495057; /* Darker border */
+}
+
+[data-bs-theme="dark"] .skill-progress {
+     background-color: #495057; /* Darker progress bar background */
+     box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .timeline-box {
+    background-color: #343a40; /* Darker timeline box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-bs-theme="dark"] .timeline-box::after {
+    background-color: #343a40;
+    border-color: var(--bs-primary); /* Keep primary border? Or secondary? */
+}
+
+[data-bs-theme="dark"] .timeline-divider {
+     border-color: rgba(var(--bs-primary-rgb), 0.3); /* Adjust dashed line */
+}
+
+[data-bs-theme="dark"] #contact {
+     /* Gradient might be okay, or choose a dark solid color */
+     /* background: #212529; */
+}
+
+[data-bs-theme="dark"] footer {
+    background-color: #111; /* Darker footer */
+}
+
+/* Responsive Styles (From style2, adapted) */
+@media screen and (max-width: 768px) {
+    #my-name {
+        font-size: 2.2rem; /* Smaller name on mobile */
+    }
+    #my-image {
+        height: 10rem;
+        width: 10rem;
+        margin-top: -5rem;
+    }
+    #about-para {
+        width: 90%; /* Wider para */
+    }
+    .skills-display {
+        width: 90%;
+    }
+    .timeline {
+        width: 90%;
+    }
+    .timeline-box {
+        width: 90%; /* Stack timeline boxes */
+        left: 5% !important; /* Center stacked boxes */
+        margin-bottom: 20px;
+    }
+    .timeline-box:nth-child(2n) {
+        left: 5% !important;
+    }
+    .timeline-box::after {
+        left: -10px !important; /* Position dots on left */
+    }
+     .timeline-divider {
+        left: 0; /* Move divider to left edge */
+        transform: none;
+    }
+    .timeline-traveller {
+        left: -6px; /* Position traveller over line */
+        transform: translateY(-50%) rotate(0deg); /* No rotation */
+    }
+    #portfolio-display {
+         /* Bootstrap handles grid wrapping */
+    }
+    #contact .row > div {
+        text-align: center;
+    }
+    #contact-details h4 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 572px) {
+    #body-header {
+        height: 50vh; /* Shorter header */
+    }
+     #my-name {
+        font-size: 1.8rem;
+    }
+    .social-icons li a i {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    .timeline-divider {
+        top: 5%; /* Adjust divider */
+        height: 90%;
+    }
+}

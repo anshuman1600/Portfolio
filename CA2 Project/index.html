@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshuman Singh - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
+
+    <!-- Header Section (Replaces old Navbar and Hero) -->
+    <header id="body-header">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+            <div class="container">
+                <!-- Optional Brand Name -->
+                <!-- <a class="navbar-brand" href="#">Anshuman</a> -->
+
+                <!-- Mobile Menu Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavContent" aria-controls="navbarNavContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Dark Mode Toggle (Moved here for visibility) -->
+                <button id="darkModeToggle" class="btn btn-outline-light btn-sm ms-auto ms-lg-2 order-lg-last"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i> <span id="themeName" class="d-none d-lg-inline">Light</span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavContent">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Name and Social Links -->
+        <div id="name-social-container" class="d-flex flex-column justify-content-center align-items-center h-100">
+            <div class="text-center">
+                <!-- Use the name consistently -->
+                <h1 id="my-name" class="text-white display-3 fw-bold text-uppercase">Anshuman Singh</h1>
+            </div>
+            <div class="mt-3">
+                <ul class="list-inline text-center social-icons mb-0">
+                    <li class="list-inline-item">
+                        <a href="#" data-bs-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" data-bs-toggle="tooltip" title="Stack Overflow"><i
+                                class="fab fa-stack-overflow"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" data-bs-toggle="tooltip" title="Google+"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" data-bs-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" data-bs-toggle="tooltip" title="Quora"><i class="fab fa-quora"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div id="my-image" class="mx-auto">
+                <!-- Placeholder image, replace with your actual image -->
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEEYf71i0mtLA/profile-displayphoto-shrink_400_400/B56ZZX31ZtGcAg-/0/1745230982116?e=1751500800&v=beta&t=zypul1jsnl5d3_VBp5tMRJZ4VDSlRbk6DPgDEyPyh_w"
+                    class="img-fluid rounded-circle border border-3 border-white shadow" alt="Anshuman Singh">
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <p id="about-para" class="text-secondary lh-lg text-center">
+                            <!-- Replace with your actual about text -->
+                            💻 Full-Stack Developer | ReactJS & MERN Specialist | Empowering Brands Through Innovative
+                            Web Solutions 🚀<span
+                                class="text-highlight fw-bold">Crafting Seamless Web Experiences with Cutting-Edge Technology </span> class for emphasis. Describe your
+                            journey, skills, and passion. Keep it engaging and informative. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-heading text-center mb-5">
+                    <h2 class="text-uppercase fw-bold"><i class="fas fa-chalkboard-user me-2"></i>Skills</h2>
+                </div>
+                <div class="skills-display row justify-content-center gy-4">
+                    <!-- Example Skill Items (Adapt using Bootstrap progress or custom divs) -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill cpp" style="width: 50%;"> <!-- Width from style2.css -->
+                                <span class="skill-name">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill html" style="width: 90%;">
+                                <span class="skill-name">HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill css" style="width: 85%;">
+                                <span class="skill-name">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill javascript" style="width: 55%;">
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill nodejs" style="width: 50%;">
+                                <span class="skill-name">NodeJS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="skill-progress">
+                            <div class="skill-fill mongodb" style="width: 70%;">
+                                <span class="skill-name">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more skills as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-5">
+            <div class="container">
+                <div class="section-heading text-center mb-5">
+                    <h2 class="text-uppercase fw-bold"><i class="fas fa-briefcase me-2"></i>Work Experience</h2>
+                </div>
+                <!-- Timeline Structure -->
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-box">
+                        <h5 class="timeline-title">JavaScript Mentor</h5>
+                        <h6 class="timeline-subtitle text-secondary">neoG Camp | Bengaluru, Karnataka</h6>
+                        <p class="timeline-duration text-muted">04/2024 - Present</p>
+                        <p class="timeline-text">
+                            Education Mentor
+                            neoG Camp · Full-time
+                        </p>
+                    </div>
+                    <!-- Timeline Item 2 (Opposite Side) -->
+                    <div class="timeline-box">
+                        <h5 class="timeline-title">
+Software Engineer
+</h5>
+                        <h6 class="timeline-subtitle text-secondary">Kraftors Web Solutions Pvt.Ltd. | Hazratganj Lucknow</h6>
+                        <p class="timeline-duration text-muted">09/2023 - 01/2024</p>
+                        <p class="timeline-text">Frontend/UI UX</p>
+                    </div>
+                    <!-- Add more items -->
+                    <div class="timeline-box">
+                        <h5 class="timeline-title">MERN Stack Developer</h5>
+                        <h6 class="timeline-subtitle text-secondary">Moundweb IT Solutions | Lucknow UP</h6>
+                        <p class="timeline-duration text-muted">03/2023 - 08/2023</p>
+                        <p class="timeline-text">working with React + ejs</p>
+                    </div>
+
+                    <div class="timeline-divider">
+                        <div class="timeline-traveller">
+                            <i class="fas fa-plane"></i> <!-- Icon from style2.css -->
+                        </div>
+                    </div>
+                </div> <!-- /.timeline -->
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-heading text-center mb-5">
+                    <h2 class="text-uppercase fw-bold"><i class="fas fa-graduation-cap me-2"></i>Education</h2>
+                </div>
+                <!-- Timeline Structure -->
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-box">
+                        <h5 class="timeline-title">MCA</h5>
+                        <h6 class="timeline-subtitle text-secondary">LPU | Jalandhar Punjab</h6>
+                        <p class="timeline-duration text-muted">2026</p>
+                        <p class="timeline-text">CGPA: 7.5</p>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-box">
+                        <h5 class="timeline-title">Frontend Engineering</h5>
+                        <h6 class="timeline-subtitle text-secondary">Relevel By Unacademy | Banglore</h6>
+                        <p class="timeline-duration text-muted">2022</p>
+                        <p class="timeline-text">Frontend + DSA</p>
+                    </div>
+                    <!-- Add more items -->
+
+                    <div class="timeline-divider">
+                        <div class="timeline-traveller">
+                            <i class="fas fa-car-side"></i> <!-- Icon from style2.css -->
+                        </div>
+                    </div>
+                </div> <!-- /.timeline -->
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="section-heading text-center mb-5">
+                    <h2 class="text-uppercase fw-bold"><i class="fas fa-list me-2"></i>Portfolio</h2>
+                </div>
+                <div id="portfolio-display" class="row g-4 justify-content-center">
+                    <!-- Portfolio Item 1 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 1"> <!-- Link to project if available -->
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                                    class="img-fluid" alt="Project 1">
+                                <div class="portfolio-overlay">
+                                    <p>Project 1 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 2">
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                                    class="img-fluid" alt="Project 2">
+                                <div class="portfolio-overlay">
+                                    <p>Project 2 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 3">
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000025_1550237330_codezen_2.png"
+                                    class="img-fluid" alt="Project 3">
+                                <div class="portfolio-overlay">
+                                    <p>Project 3 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Add items 4, 5, 6 similarly -->
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 4">
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                                    class="img-fluid" alt="Project 4">
+                                <div class="portfolio-overlay">
+                                    <p>Project 4 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 5">
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                                    class="img-fluid" alt="Project 5">
+                                <div class="portfolio-overlay">
+                                    <p>Project 5 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item">
+                        <a href="#" title="Project Title 6">
+                            <div class="portfolio-image-container">
+                                <img src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000000024_1550237299_codezen.png"
+                                    class="img-fluid" alt="Project 6">
+                                <div class="portfolio-overlay">
+                                    <p>Project 6 Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 text-white">
+            <div class="container">
+                <div class="section-heading text-center mb-5">
+                    <h2 class="text-uppercase fw-bold text-white"><i class="far fa-address-card me-2"></i>Contact</h2>
+                </div>
+                <div class="row gy-5">
+                    <!-- Contact Form -->
+                    <div class="col-lg-6">
+                        <form id="contact-form" action="#" method="POST"> <!-- Add your form endpoint later -->
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" name="message" rows="4" placeholder="Message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-light w-100">Send Message</button>
+                        </form>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="col-lg-6" id="contact-details">
+                        <h4 class="text-uppercase fw-bold mb-3">Get In Touch</h4>
+                        <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+
+                        <h4 class="text-uppercase fw-bold mt-4 mb-3">My Address</h4>
+                        <div class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> Location City, State
+                        </div>
+                        <div class="mb-2">
+                            <i class="fas fa-mobile-alt me-2"></i> (123) 456-7890
+                        </div>
+                        <div class="mb-2">
+                            <i class="far fa-envelope me-2"></i> your.email@example.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-secondary">
+        <div class="container">
+            <!-- Re-using existing social icons style -->
+            <ul class="list-inline text-center social-icons mb-2">
+                <li class="list-inline-item">
+                    <a href="#" data-bs-toggle="tooltip" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" data-bs-toggle="tooltip" title="Stack Overflow"><i
+                            class="fab fa-stack-overflow"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" data-bs-toggle="tooltip" title="Google+"><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" data-bs-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" data-bs-toggle="tooltip" title="Quora"><i class="fab fa-quora"></i></a>
+                </li>
+            </ul>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Anshuman Singh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
